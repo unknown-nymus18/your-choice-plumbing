@@ -1,0 +1,496 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(0px);
+    background: transparent;
+}
+
+header.sticky {
+    position: fixed;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.105);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+header > p {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+    justify-self: start;
+}
+
+header nav {
+    justify-self: center;
+}
+
+.nav-container {
+    justify-self: center;
+}
+
+.contact-container {
+    justify-self: end;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+header > div:last-child p {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+header nav li {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header nav li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: block;
+}
+
+header nav li a:hover {
+    color: rgba(57, 56, 56, 0.7);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+header nav li:hover {
+    color: rgba(57, 56, 56, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Hide contact link in navigation on desktop */
+.contact-link {
+    display: none;
+}
+
+.contact{
+    border: solid;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.contact:hover{
+    backdrop-filter: blur(12px);
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.footer-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.footer-section {
+    color: white;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+    color: #ddd;
+}
+
+/* Footer Navigation Styles */
+.footer-nav {
+    margin-top: 1rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-nav ul li {
+    margin: 0;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.footer-nav ul li a:hover {
+    color: #ffa500;
+    transform: translateX(5px);
+}
+
+/* Mobile responsiveness for footer */
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+        min-height: 400px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .footer-background {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .footer-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        gap: 1.5rem;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .footer-section {
+        margin-bottom: 1rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+        margin: 0.3rem 0;
+    }
+    
+    .footer-section ul li {
+        font-size: 0.9rem;
+        margin: 0.3rem 0;
+    }
+    
+    .footer-nav {
+        margin-top: 0.8rem;
+    }
+    
+    .footer-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+    
+    .footer-nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+    }
+}
+
+/* Header Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto;
+        gap: 0;
+        padding: 15px 20px;
+        position: relative;
+        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    header.sticky {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.15);
+    }
+    
+    header.mobile-menu-open {
+        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    header > p {
+        font-size: 20px;
+        justify-self: start;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        justify-self: end;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 100px 30px 30px;
+        box-shadow: -8px 0 25px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header.mobile-menu-open .nav-container {
+        right: 0;
+    }
+    
+    .nav-container nav {
+        justify-self: stretch;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .nav-container nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-container nav li {
+        font-size: 20px;
+        text-align: left;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container nav li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-container nav li a {
+        display: block;
+        padding: 18px 0;
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-radius: 0;
+        position: relative;
+        font-size: 18px;
+    }
+    
+    .nav-container nav li a:hover {
+        color: #4a90e2;
+        background: transparent;
+        padding-left: 10px;
+    }
+    
+    .nav-container nav li a::before {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 2px;
+        background: #4a90e2;
+        transition: width 0.3s ease;
+    }
+    
+    .nav-container nav li a:hover::before {
+        width: 20px;
+    }
+    
+    /* Contact link styling within navigation */
+    .nav-container nav li .contact-link {
+        background: #4a90e2;
+        color: white;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    }
+    
+    .nav-container nav li .contact-link:hover {
+        background: #357abd;
+        color: white;
+        padding-left: 15px;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+    }
+    
+    .nav-container nav li .contact-link:hover::before {
+        display: none;
+    }
+    
+    .nav-container nav li .contact-label {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-bottom: 4px;
+    }
+    
+    .nav-container nav li .contact-number {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .contact-container {
+        display: none;
+    }
+    
+    /* Mobile menu overlay and background blur */
+    header.mobile-menu-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        z-index: 999;
+        transition: all 0.3s ease;
+    }
+    
+    /* Blur the main content when menu is open */
+    body.menu-open main {
+        filter: blur(5px);
+        transition: filter 0.3s ease;
+    }
+    
+    body.menu-open footer {
+        filter: blur(5px);
+        transition: filter 0.3s ease;
+    }
+}
