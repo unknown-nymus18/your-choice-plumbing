@@ -10,12 +10,14 @@ header {
     align-items: center;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
     background: transparent;
 }
 
 header.sticky {
     position: fixed;
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.105);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -136,6 +138,7 @@ header nav li:hover {
 }
 
 .contact:hover{
+    -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     transform: scale(1.1);
     background: rgba(255, 255, 255, 0.1);
@@ -175,6 +178,7 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 2;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background: rgba(0, 0, 0, 0.4);
     display: grid;
@@ -248,66 +252,97 @@ footer {
 @media (max-width: 768px) {
     footer {
         height: auto;
-        min-height: 400px;
+        min-height: 500px;
         width: 100%;
         overflow: hidden;
+        margin-top: 3rem;
     }
     
     .footer-background {
         width: 100%;
         height: 100%;
+        min-height: 500px;
     }
     
     .footer-background img {
         width: 100%;
         height: 100%;
+        min-height: 500px;
         object-fit: cover;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
-        padding: 1.5rem 1rem;
+        padding: 2.5rem 1.5rem;
         text-align: center;
-        gap: 1.5rem;
-        height: 100%;
+        gap: 2.5rem;
+        height: auto;
+        min-height: 500px;
         width: 100%;
-        backdrop-filter: blur(6px);
-        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.6);
+        align-items: flex-start;
+        padding-top: 3rem;
     }
     
     .footer-section {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
+        padding: 0 0.5rem;
     }
     
     .footer-section h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        color: #fff;
     }
     
     .footer-section p {
-        font-size: 0.9rem;
-        margin: 0.3rem 0;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        line-height: 1.6;
+        color: #f0f0f0;
+    }
+    
+    .footer-section ul {
+        margin-top: 0.5rem;
     }
     
     .footer-section ul li {
-        font-size: 0.9rem;
-        margin: 0.3rem 0;
+        font-size: 1rem;
+        margin: 0.6rem 0;
+        color: #f0f0f0;
+        line-height: 1.5;
     }
     
     .footer-nav {
-        margin-top: 0.8rem;
+        margin-top: 1rem;
     }
     
     .footer-nav ul {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.8rem;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+    
+    .footer-nav ul li {
+        width: 100%;
     }
     
     .footer-nav ul li a {
-        font-size: 0.9rem;
-        padding: 0.3rem 0;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        display: inline-block;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .footer-nav ul li a:hover {
+        color: #ffa500;
+        transform: translateX(0);
     }
 }
 
@@ -319,17 +354,20 @@ footer {
         gap: 0;
         padding: 15px 20px;
         position: relative;
+        -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         background: rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease;
     }
     
     header.sticky {
+        -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
         background: rgba(255, 255, 255, 0.15);
     }
     
     header.mobile-menu-open {
+        -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
         background: rgba(255, 255, 255, 0.2);
     }
@@ -354,6 +392,7 @@ footer {
         max-width: 320px;
         height: 100vh;
         background: rgba(255, 255, 255, 0.98);
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 100px 30px 30px;
@@ -478,6 +517,7 @@ footer {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         z-index: 999;
         transition: all 0.3s ease;
