@@ -1,5 +1,6 @@
 import '../styles/services.css';
-import { Link } from 'react-router-dom';
+import ServiceCard from '../components/ServiceCard';
+// import { Link } from 'react-router-dom';
 
 export default function Services() {
     return (
@@ -32,41 +33,20 @@ export default function Services() {
                     </div>
 
                     <div className="services-grid">
-                        <div className="service-card">
-                            <div className="service-image">
-                                <img src="/assets/images/services/residential.webp" alt="Residential Services" />
-                            </div>
-                            <div className="service-content">
-                                <h3>Residential Services</h3>
-                                <p>Anyone who owns a home understands that plumbing issues can never be foreseen 100%...</p>
-                                <Link to="/services" className="read-more-btn">READ MORE</Link>
-                            </div>
-                        </div>
+                        <ServiceCard heading={'Residential Services'} img={"/assets/images/services/residential.webp"}>
+                            Anyone who owns a home understands that plumbing issues can never be foreseen 100%. From leaky faucets and burst pipes to full bathroom remodels and water heater replacements, our skilled technicians are equipped to handle any residential plumbing challenge. We ensure your home's systems are safe, efficient, and reliable for years to come.
+                        </ServiceCard>
 
-                        <div className="service-card">
-                            <div className="service-image">
-                                <img src="/assets/images/services/commercial.jpg" alt="Commercial Services" />
-                            </div>
-                            <div className="service-content">
-                                <h3>Commercial Services</h3>
-                                <p>No job is too large for us! Commercial properties need professional plumbers in any case...</p>
-                                <Link to="/services" className="read-more-btn">READ MORE</Link>
-                            </div>
-                        </div>
+                        <ServiceCard heading={"Commercial Services"} img={"/assets/images/services/commercial.jpg"}>
+                            No job is too large for us! Commercial properties need professional plumbers to keep operations running smoothly. We provide comprehensive commercial plumbing solutions, including large-scale pipe installations, grease trap maintenance, backflow prevention, and 24/7 emergency repairs to minimize your business downtime.
+                        </ServiceCard>
 
-                        <div className="service-card">
-                            <div className="service-image">
-                                <img src="/assets/images/services/plumbing-works.webp" alt="Plumber Repair Works" />
-                            </div>
-                            <div className="service-content">
-                                <h3>Plumber Repair Works</h3>
-                                <p>Toilet Installation, Sink Installation, Tankless Water Heater Installation, Garbage Disposal Installation...</p>
-                                <Link to="/services" className="read-more-btn">READ MORE</Link>
-                            </div>
-                        </div>
+                        <ServiceCard heading={"Plumber Repair Works"} img={"/assets/images/services/plumbing-works.webp"}>
+                            Toilet Installation, Sink Installation, Tankless Water Heater Installation, and Garbage Disposal Installation. Whether it is a minor repair or a complex installation, our expert team guarantees precision and quality. We use industry-leading tools and premium materials to ensure that every fix is durable and meets the highest safety standards.
+                        </ServiceCard>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 }
