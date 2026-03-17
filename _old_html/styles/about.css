@@ -50,6 +50,32 @@
     line-height: 1.5;
 }
 
+/* Mobile responsiveness for hero */
+@media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 5% 15vh;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 90%;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+}
+
 /* Container */
 .container {
     max-width: 1200px;
