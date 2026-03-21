@@ -68,6 +68,7 @@
 }
 
 .hero-info img {
+    
     background-size: cover;
     max-width: 100%;
     height: auto;
@@ -131,15 +132,20 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    max-height: 600px;
+    /* max-width: 500px; */
 }
 
 .recent-work img {
-    height: auto;
-    width: 100%;
+    /* height: auto; */
+    /* width: 100%; */
+    /* object-fit:fill; */
+    /* width: 600px; */
+
     max-width: 600px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     /* Soft blending instead of a stark 'card' border box */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); */
 }
 
 .apprenticeship {
