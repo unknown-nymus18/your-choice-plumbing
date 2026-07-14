@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import heroVideo from "../assets/images/homepage/home-hero.mp4";
 import "../styles/home.css";
 
 export default function Home() {
@@ -14,6 +15,18 @@ export default function Home() {
   return (
     <>
       <div className="home-hero">
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          // poster="/assets/images/homepage/home-hero.webp"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="hero-overlay" />
         <div className="hero-text">
           <h1>Your Choice Plumbing</h1>
           <p>Your number 1 Plumbing and reparing services</p>
